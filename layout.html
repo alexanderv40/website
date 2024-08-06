@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="De bank van Alexander" />
+    <meta property="og:description" content="Officiële Bank Alexander" />
+    <title>BankAlexander</title>
+    <style>
+        body {
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color:white;
+            margin: 0;
+            padding: 0;
+            background-image: url("{{ url_for('static', filename='images/bankbg.jpg') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        header, footer {
+            background-color: #123;
+            color: white;
+            text-align: center;
+            padding: 1em;
+
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        main {
+            padding: 1.5em;
+        }
+
+        input {
+                width: 30%;
+                padding: 15px;
+                font-size: 16px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+
+        }
+        button {
+            padding: 16px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .bottom-button {
+            position: fixed;
+            bottom: 605px;
+            left: 95%;
+            transform: translateX(-50%);
+            padding: 8px 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .bottom-right-image {
+            position: fixed;
+            bottom: 60px;
+            right: 10px;
+            width: 180px;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .suggestions {
+            border: 1px solid #ccc;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+    </style>
+</head>
+<header>DE BANK VAN ALEXANDER, UW PARTNER IN HET LEVEN
+
+</header>
+<body >
+<main>
+    {% block body %}
+    {% endblock %}
+</main>
+<img src="static/images/logoo.jpg" alt="Sample Image" class="bottom-right-image">
+    <div style="text-align: center;">
+        <footer>All rights reserved Alexander Verstraete 2024</footer>
+    </div>
+
+</body>
+
+
+</html>

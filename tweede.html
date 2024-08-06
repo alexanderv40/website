@@ -1,0 +1,29 @@
+{%extends "layout.html" %}
+{% block body %}
+<body>
+    <div style="text-align: center;">
+       <H1>Hallo {{user[0].name}}</H1>
+        <p>Je bank balans staat op dit moment op <p>
+        <h2>{{user[0].balance}} EURO</h2>
+        <p>je rekeningnummer is {{user[0].idd}}</p>
+    </div>
+    <div style="text-align:center;">
+        <form action="/search" method="get">
+            <input type="text" autofocus autocomplete="off" placeholder="Mensen opzoeken" name="overschrijven" >
+            <button type="submit">Zoeken</button>
+        </form>
+        <form action="/over" method="get">
+            <button  type="submit">Overschrijven</button>
+
+        </form>
+            {% block dik %}
+            {%endblock%}
+
+    </div>
+    <div class="bottom-button">
+        <form action ="/logout" method="get">
+            <button type="submit"> logout</button>
+        </form>
+    </div>
+</body>
+{%endblock%}

@@ -1,0 +1,23 @@
+{%extends "tweede.html" %}
+{% block dik %}
+    <style>
+        .content-area {
+            position: relative;
+            left: var(30%)
+        }
+    </style>
+    <h4>voor zoekresultaat: {{q}}</h4>
+ <div class="content-area";>
+    <ul>
+        {%for sho in show%}
+            <ul>{{sho["idd"]}}  -  {{sho["name"]}}</ul>
+        {%endfor%}
+
+
+
+    </ul>
+
+</div>
+
+
+{%endblock%}

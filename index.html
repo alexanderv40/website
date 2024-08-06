@@ -1,0 +1,20 @@
+{%extends "layout.html" %}
+{% block body %}
+    <div style="text-align: center;">
+        <h1>ALEXANDER BANKEN GROEP</h1>
+        <h1>Dit is de pagina van de bank </h1>
+        <br>
+        <br>
+        <form action="/greet" method="post" >
+            <input autofocus autocomplete="on" placeholder="naam"name="name"type="text"><br>
+            <input autofocus autocomplete="off" placeholder="password" name="password"type="password"><br>
+            <button type="submit"> LOGIN</button>
+        </form>
+        <p>
+        <h3>OF</h3>
+        </p>
+        <form action="/login" method="get">
+            <button type="submit">Klik hier om je in te registreren</button>
+        </form>
+    </div>
+{% endblock %}
