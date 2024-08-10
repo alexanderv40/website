@@ -1,0 +1,17 @@
+{%extends "layout.html" %}
+{% block body %}
+
+    <div  style="text-align:center;">
+        <form action="/home" method="post">
+            <input autofocus autocomplete="off" placeholder="naam"name="name"type="text"><br>
+            <input autofocus autocomplete="off" placeholder="password" name="password"type="password"><br>
+            <button type="submit"> register</button>
+        </form>
+         <br>
+    </div>
+    <div class="bottom-button">
+        <form action ="/" method="get">
+            <button type="submit"> home</button>
+        </form>
+    </div>
+{%endblock %}

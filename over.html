@@ -1,0 +1,27 @@
+{%extends "layout.html" %}
+{% block body %}
+<body>
+    <div style="text-align: center;">
+       <H1>{{user[0].name}}        {{user[0].balance}} EURO</H1>
+        <p>je rekeningnummer is {{user[0].idd}}</p>
+
+    </div>
+        <div  style="text-align:center;">
+        <form action="/overs" method="get">
+            <label>Typ rekeningnummer van de begunstigde</label>
+            <input autofocus autocomplete="off" placeholder="rekeningnummer"name="begunstigde"type="text"><br>
+            <label>Typ hier het bedrag dat je overschrijven €</label>
+            <input autofocus autocomplete="off" placeholder="bedrag" name="bedrag" required><br>
+            <button type="submit"> bevestig</button>
+        </form>
+         <br>
+    </div>
+
+
+    <div class="bottom-button">
+        <form action ="/auth" method="get">
+            <button type="submit"> terug</button>
+        </form>
+    </div>
+</body>
+{%endblock%}
